@@ -28,19 +28,11 @@ public class BukkitMain extends JavaPlugin {
 
     private void initMetrics() {
         metrics = new Metrics(this);
-        metrics.addCustomChart(new Metrics.SimplePie("used_message_method") {
-            @Override
-            public String getValue() {
-                return DefaultConfig.getMessageMethod().name().toUpperCase();
-            }
-        });
+        metrics.addCustomChart(new Metrics.SimplePie("used_message_method", () ->
+                DefaultConfig.getMessageMethod().name().toUpperCase()));
 
-        metrics.addCustomChart(new Metrics.SimplePie("used_money_item_drop") {
-            @Override
-            public String getValue() {
-                return DefaultConfig.isMoneyItemDropEnabled() ? "Enabled" : "Disabled";
-            }
-        });
+        metrics.addCustomChart(new Metrics.SimplePie("used_money_item_drop", () ->
+                DefaultConfig.isMoneyItemDropEnabled() ? "Enabled" : "Disabled"));
     }
 
     private boolean initEconomy() {
@@ -57,7 +49,6 @@ public class BukkitMain extends JavaPlugin {
     private void hookMobArena() {
         if (Bukkit.getPluginManager().getPlugin("MobArena") != null) {
             mobArenaHandler = new MobArenaHandler();
-
             Logger.info("MobArena hooked");
         } else {
             Logger.info("MobArena not found");
@@ -85,18 +76,19 @@ public class BukkitMain extends JavaPlugin {
         getCommand("km").setExecutor(new KMCommand());
         getCommand("kmadmin").setExecutor(new KMAdminCommand());
 
-        Bukkit.getPluginManager().registerEvents(new EntityManager(), this);
-        Bukkit.getPluginManager().registerEvents(new MoneyHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new CItemHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new CCommandHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new CExpHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new MessageHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new CashTransferHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new AntiFarmingHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new LimitHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new MultiplierHandler(), this);
-        Bukkit.getPluginManager().registerEvents(new KMPlayerManager(), this);
-        Bukkit.getPluginManager().registerEvents(updater, this);
+        org.bukkit.plugin.PluginManager pm = Bukkit.getPluginManager();
+        pm.registerEvents(new EntityManager(), this);
+        pm.registerEvents(new MoneyHandler(), this);
+        pm.registerEvents(new CItemHandler(), this);
+        pm.registerEvents(new CCommandHandler(), this);
+        pm.registerEvents(new CExpHandler(), this);
+        pm.registerEvents(new MessageHandler(), this);
+        pm.registerEvents(new CashTransferHandler(), this);
+        pm.registerEvents(new AntiFarmingHandler(), this);
+        pm.registerEvents(new LimitHandler(), this);
+        pm.registerEvents(new MultiplierHandler(), this);
+        pm.registerEvents(new KMPlayerManager(), this);
+        pm.registerEvents(updater, this);
 
         if (DefaultConfig.isCheckUpdate()) {
             getServer().getScheduler().runTaskTimerAsynchronously(this, new Runnable() {
@@ -120,6 +112,8 @@ public class BukkitMain extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        // unregister all registered listeners in this plugin
+        org.bukkit.event.HandlerList.unregisterAll(this);
         instance = null;
         updater = null;
     }
