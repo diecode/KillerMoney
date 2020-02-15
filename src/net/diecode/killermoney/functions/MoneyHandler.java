@@ -201,7 +201,7 @@ public class MoneyHandler implements Listener {
             e.setCancelled(true);
 
             BigDecimal money = new BigDecimal(Double.valueOf(ChatColor.stripColor(is.getItemMeta().getLore().get(0))
-                    .replaceAll("[^0-9.]", "")))
+                    .replaceAll("[^0-9.]", "")) * is.getAmount())
                     .setScale(DefaultConfig.getDecimalPlaces(), BigDecimal.ROUND_HALF_EVEN);
 
             EntityType entityType = EntityType.valueOf(is.getItemMeta().getLore().get(1));
