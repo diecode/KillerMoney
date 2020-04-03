@@ -18,7 +18,7 @@
 | /kmadmin info | km.admin | Plugin info |
 | /kmadmin reload | km.admin | Reload config.yml, entities.yml & lang.yml |
 | /kmadmin limit reset | km.admin | Reset money & item limits |
-| /kmadmin multiplier <function> [value] | Set a custom multiplier for a given amount of time | 
+| /kmadmin multiplier <function> [value] | Set a custom multiplier for a given amount of time |
 | /km help | | Display command help |
 | /km enable-messages <on\|off> | | Enable or disable the kill messages |
 |  | km.bypass.moneylimit | Bypass money limit |
@@ -35,6 +35,11 @@
 + Step 3: Restart your server for the plugin files to generate and for the plugin to load.
 + Step 4: Customise config.yml and entities.yml files to your like and set your language in the lang.yml file.
 + Step 5: Use it and send feedback for future developments
+
+## Configuration Documentation
+- [config.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Config.md)
+- [entities.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Entities.md)
+- [lang.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Lang.md)
 
 ## API (WIP)
 
