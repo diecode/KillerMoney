@@ -1,15 +1,15 @@
 # KillerMoney 4 (Bukkit plugin)
 
 ## Abilities of the plugin
-- Giving or charging a player by either a fix amount of money, or random between a max and minimum amount when they kill an entity
-- Charging the victim of a PVP
-- Fully customisable loot dropping when an entity die
-- Running a command of your choice when an entity die
-- Banning the ability to farm entities for money,if they were spawned by either eggs or spawners
+- Give or charge a player with a fixed or a random (between a min/max) amount of money when they kill an entity
+- Full PVP support
+- Fully customizable loot drop when an entity dies
+- Run a command of your choice when an entity dies
+- Ban the ability to farm entities for money if they were spawned with eggs or spawners
 - Multiworld support for entities
-- Full modularity, the only thing you need to add to the config file is what you need!
-- Customisable messages
-- Permission support by each entity for a perfect rank system
+- Full modularity; the only thing you need to add to the config file is what you need!
+- Customizable messages
+- Permission support for each entity; perfect for a rank system
 - Public API
 
 ## Commands & Permissions
@@ -30,9 +30,9 @@
 
 ## Installing
 *Note: If you have KillerMoney versions 1.x, 2.x or 3.x installed, delete it with all files and configurations.*
-1. Install [vault](https://dev.bukkit.org/projects/vault) and a vault supported Economy plugin (for example Essentials, BOSEconomy, iConomy, etc.) if you want use money reward feature.
+1. Install [vault](https://dev.bukkit.org/projects/vault) and a vault supported Economy plugin (for example Essentials, BOSEconomy, iConomy, etc.) if you want use the money reward feature.
 2. Download the latest version of [KillerMoney](https://dev.bukkit.org/projects/killermoney) and copy it into your plugins folder.
-3. Restart your server for the plugin files to generate and for the plugin to load.
+3. Restart your server to load the plugin and generate the default config files.
 4. Customize configuration files to your liking
   - config.yml
   - entities.yml
