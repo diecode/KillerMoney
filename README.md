@@ -1,16 +1,16 @@
 # KillerMoney 4 (Bukkit plugin)
 
 ## Abilities of the plugin
-* Giving or charging a player by either a fix amount of money, or random between a max and minimum amount when they kill an entity
-* Charging the victim of a PVP
-* Fully customisable loot dropping when an entity die
-* Running a command of your choice when an entity die
-* Banning the ability to farm entities for money,if they were spawned by either eggs or spawners
-* Multiworld support for entities
-* Full modularity, the only thing you need to add to the config file is what you need!
-* Customisable messages
-* Permission support by each entity for a perfect rank system
-* Public API
+- Giving or charging a player by either a fix amount of money, or random between a max and minimum amount when they kill an entity
+- Charging the victim of a PVP
+- Fully customisable loot dropping when an entity die
+- Running a command of your choice when an entity die
+- Banning the ability to farm entities for money,if they were spawned by either eggs or spawners
+- Multiworld support for entities
+- Full modularity, the only thing you need to add to the config file is what you need!
+- Customisable messages
+- Permission support by each entity for a perfect rank system
+- Public API
 
 ## Commands & Permissions
 | Command | Permission | Description |
@@ -30,31 +30,35 @@
 
 ## Installing
 *Note: If you have KillerMoney versions 1.x, 2.x or 3.x installed, delete it with all files and configurations.*
-1. Install VAULT and Economy plugins (for example Essentials, BOSEconomy, iConomy, etc.) if you want use money reward feature.
-2. Download the latest version of KillerMoney and copy it into your plugins folder.
+1. Install [vault](https://dev.bukkit.org/projects/vault) and a vault supported Economy plugin (for example Essentials, BOSEconomy, iConomy, etc.) if you want use money reward feature.
+2. Download the latest version of [KillerMoney](https://dev.bukkit.org/projects/killermoney) and copy it into your plugins folder.
 3. Restart your server for the plugin files to generate and for the plugin to load.
-4. Customise config.yml and entities.yml files to your like and set your language in the lang.yml file.
-5. Use it and send feedback for future developments
+4. Customize configuration files to your liking
+  - config.yml
+  - entities.yml
+  - lang.yml
+5. From the console, type `kmadmin reload` to reload the configuration files.
+6. Send feedback for future developments! :smile:
 
 ## Configuration Documentation
-* [config.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Config.md)
-* [entities.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Entities.md)
-* [lang.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Lang.md)
+- [config.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Config.md)
+- [entities.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Entities.md)
+- [lang.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Lang.md)
 
 ## API (WIP)
 
 #### Events
-* KMCashTransferProcessorEvent
-* KMCCommandExecutionEvent
-* KMCItemDropEvent
-* KMEarnMoneyCashTransferDepositEvent
-* KMEarnMoneyDepositEvent
-* KMEarnMoneyPickedUpEvent
-* KMGlobalMultiplierChangeEvent
-* KMLimitReachedEvent
-* KMLoseMoneyCashTransferEvent
-* KMLoseMoneyEvent
-* KMMoneyItemDropEvent
-* KMMoneyProcessorEvent
-* KMSendActionBarMessageEvent
-* KMSendMessageEvent
+- KMCashTransferProcessorEvent
+- KMCCommandExecutionEvent
+- KMCItemDropEvent
+- KMEarnMoneyCashTransferDepositEvent
+- KMEarnMoneyDepositEvent
+- KMEarnMoneyPickedUpEvent
+- KMGlobalMultiplierChangeEvent
+- KMLimitReachedEvent
+- KMLoseMoneyCashTransferEvent
+- KMLoseMoneyEvent
+- KMMoneyItemDropEvent
+- KMMoneyProcessorEvent
+- KMSendActionBarMessageEvent
+- KMSendMessageEvent
