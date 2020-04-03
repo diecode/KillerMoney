@@ -12,23 +12,21 @@
 + Permission support by each entity for a perfect rank system
 + Public API
 
-## Commands
-+ /km help
-+ /km info
-+ /km limit <reset or clear>
-+ /km multiplier <set, get, reset>
-+ /km reload
-
-## Permissions
-| Permission | Description |
-| ------------- | ------------- |
-| km.admin | For admin commands: limit, multiplier, reload |
-| km.bypass.moneylimit | Bypass money limit |
-| km.bypass.itemlimit | Bypass item limit |
-| km.bypass.commandlimit | Bypass command limit |
-| km.bypass.cashtransferlimit | Bypass cash transfer limit |
-| km.money.multiplier.NAME_FROM_CONFIG | Money multiplier |
-| km.moneylimit.multiplier.NAME_FROM_CONFIG | Money limit multiplier |
+## Commands & Permissions
+| Command | Permission | Description |
+| ------------- | ------------- | ------------- |
+| /kmadmin info | km.admin | Plugin info |
+| /kmadmin reload | km.admin | Reload config.yml, entities.yml & lang.yml |
+| /kmadmin limit reset | km.admin | Reset money & item limits |
+| /kmadmin multiplier <function> [value] | Set a custom multiplier for a given amount of time | 
+| /km help | | Display command help |
+| /km enable-messages <on\|off> | | Enable or disable the kill messages |
+|  | km.bypass.moneylimit | Bypass money limit |
+|  | km.bypass.itemlimit | Bypass item limit |
+|  | km.bypass.commandlimit | Bypass command limit |
+|  | km.bypass.cashtransferlimit | Bypass cash transfer limit |
+|  | km.money.multiplier.NAME_FROM_CONFIG | Money multiplier |
+|  | km.moneylimit.multiplier.NAME_FROM_CONFIG | Money limit multiplier |
 
 ## Installing
 + Step 0: If you have either KillerMoney 1.x, 2.x or 3.x installed, delete it with all files and configurations.
