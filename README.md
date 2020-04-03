@@ -18,9 +18,9 @@
 2. Download the latest version of [KillerMoney](https://dev.bukkit.org/projects/killermoney) and copy it into your plugins folder.
 3. Restart your server to load the plugin and generate the default config files.
 4. Customize configuration files to your liking
-  - config.yml
-  - entities.yml
-  - lang.yml
+   - config.yml
+   - entities.yml
+   - lang.yml
 5. From the console, type `kmadmin reload` to reload the configuration files.
 6. Send feedback for future developments! :smile:
 
