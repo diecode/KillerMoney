@@ -1,32 +1,16 @@
 # KillerMoney 4 (Bukkit plugin)
 
-## Abilities of the plugin
+## Plugin Features
 - Give or charge a player with a fixed or a random (between a min/max) amount of money when they kill an entity
 - Full PVP support
 - Fully customizable loot drop when an entity dies
 - Run a command of your choice when an entity dies
 - Ban the ability to farm entities for money if they were spawned with eggs or spawners
-- Multiworld support for entities
+- Multiworld entity support
 - Full modularity; the only thing you need to add to the config file is what you need!
 - Customizable messages
 - Permission support for each entity; perfect for a rank system
 - Public API
-
-## Commands & Permissions
-| Command | Permission | Description |
-| ------------- | ------------- | ------------- |
-| /kmadmin info | `km.admin` | Plugin info |
-| /kmadmin reload | `km.admin` | Reload config.yml, entities.yml & lang.yml |
-| /kmadmin limit reset | `km.admin` | Reset money & item limits |
-| /kmadmin multiplier <function> [value] |  | Set a custom multiplier for a given amount of time |
-| /km help |  | Display command help |
-| /km enable-messages <on\|off> |  | Enable or disable the kill messages |
-|  | `km.bypass.moneylimit` | Bypass money limit |
-|  | `km.bypass.itemlimit` | Bypass item limit |
-|  | `km.bypass.commandlimit` | Bypass command limit |
-|  | `km.bypass.cashtransferlimit` | Bypass cash transfer limit |
-|  | `km.money.multiplier.NAME_FROM_CONFIG` | Money multiplier |
-|  | `km.moneylimit.multiplier.NAME_FROM_CONFIG` | Money limit multiplier |
 
 ## Installing
 *Note: If you have KillerMoney versions 1.x, 2.x or 3.x installed, delete it with all files and configurations.*
@@ -44,6 +28,22 @@
 - [config.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Config.md)
 - [entities.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Entities.md)
 - [lang.yml](https://github.com/diecode/KillerMoney/blob/master/docs/Lang.md)
+
+## Commands & Permissions
+| Command | Permission | Description |
+| ------------- | ------------- | ------------- |
+| /kmadmin info | `km.admin` | Plugin info |
+| /kmadmin reload | `km.admin` | Reload config.yml, entities.yml & lang.yml |
+| /kmadmin limit reset | `km.admin` | Reset money & item limits |
+| /kmadmin multiplier <function> [value] |  | Set a custom multiplier for a given amount of time |
+| /km help |  | Display command help |
+| /km enable-messages <on\|off> |  | Enable or disable the kill messages |
+|  | `km.bypass.moneylimit` | Bypass money limit |
+|  | `km.bypass.itemlimit` | Bypass item limit |
+|  | `km.bypass.commandlimit` | Bypass command limit |
+|  | `km.bypass.cashtransferlimit` | Bypass cash transfer limit |
+|  | `km.money.multiplier.NAME_FROM_CONFIG` | Money multiplier |
+|  | `km.moneylimit.multiplier.NAME_FROM_CONFIG` | Money limit multiplier |
 
 ## API (WIP)
 
