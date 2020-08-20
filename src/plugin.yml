@@ -1,6 +1,7 @@
 name: KillerMoney
 main: net.diecode.killermoney.BukkitMain
 version: 4.6.0
+api-version: "1.13"
 softdepend: [Vault, MobArena, Multiverse-Core]
 author: diecode
 website: https://www.spigotmc.org/resources/killermoney.485/
